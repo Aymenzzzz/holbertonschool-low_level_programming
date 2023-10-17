@@ -1,26 +1,17 @@
-#include"main.h"
-#include<stdio.h>
-#include<unistd.h>
-#include<stdlib.h>
-
+#include "main.h"
 /**
-* print_alphabet - prints alphabet
-*
-* Return: always 0;
-*
-*/
+ * print_alphabet - print alphabet in - lowercass -
+ *
+ * Return: print standard output
+ */
 
 void print_alphabet(void)
-
 {
-	char ch;
+	int letterz = 'a';
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	for (; letterz <= 'z'; letterz++)
 	{
-		putchar(ch);
-
+		_putchar(letterz);
 	}
-
-	putchar('\n');
-
+	_putchar('\n');
 }
