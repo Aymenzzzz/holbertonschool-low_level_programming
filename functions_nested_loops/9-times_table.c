@@ -1,43 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
 #include "main.h"
 /**
- * times_table - print hours
- * Return: always last digit
- */
+* times_table - Prints the 9 times table, starting with 0
+*
+*Return: empty output
+*/
 
 void times_table(void)
+{int x, y, z;
+for (x = 0; x <= 9; x++)
 {
-int i, j, n;
-
-for (i = 0; i <= 9; i++)
-{
-for (j = 0; j <= 9; j++)
-	{
-	n = i * j;
-
-	if ((n / 10) == 0)
-	{
-	if (j != 0)
-	_putchar(' ');
-	_putchar(n + '0');
-
-	if (j == 9)
-	continue;
-	_putchar(',');
-	_putchar(' ');
-	}
-	else
-	{
-	_putchar((n / 10) + '0');
-	_putchar((n % 10) + '0');
-	if (j == 9)
-	continue;
-	_putchar(',');
-	_putchar(' ');
-	}
-	}
-_putchar('\n');
+	for (y = 0; y <= 9; y++)
+{z = x * y;
+if (y)
+{putchar(',');
+putchar(' ');
+}
+if (z < 10 && y)
+putchar(' ');
+if (z >= 10)
+putchar(z / 10 + '0');
+putchar(z % 10 + '0');
+}
+putchar('\n');
 }
 }
